@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Lekton:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+$primary-color: #0A363F;
+$primary-color-variant: #4397A1;
+$secondary-color: #0A363F;
+$white-color: #ffffff;
+$light-color: #FEE7E1;
+$black-color: #0c031b;
+$dark-color: rgba($black-color, 0.7);
+$success-color: #5FBCCB;
+$container-lg: 82%;
+$container-md: 90%;

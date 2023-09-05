@@ -1,0 +1,53 @@
+.swiper {
+    width: $container-lg;
+
+    .swiper-wrapper {
+
+        .swiper-slide {
+            background: $white-color;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            cursor: default;
+            font-size: 0.9rem;
+            color: #041316;
+            width: 10%;
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            .client {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .avatar {
+                    width: 2.5rem;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background: $primary-color;
+    }
+}
+
+#testimonials {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+    .swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                padding: 1.5rem;
+            }
+        }
+    }
+}

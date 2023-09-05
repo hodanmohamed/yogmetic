@@ -1,0 +1,109 @@
+nav {
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    background: #041316;
+    box-shadow: 0 1rem 1rem rgba($black-color, 0.1);
+
+    &.window-scroll {
+        background: $white-color;
+
+        .container {
+            button {
+                color: $black-color;
+            }
+
+            a {
+                color: $black-color;
+                
+                & > h3 {
+                    color: $black-color;
+                }
+
+                &.btn {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    button {
+        /*only needed when small screen*/
+        display: none;
+    }
+
+    a {
+        color: $white-color;
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .nav_logo h3 {
+        color: $white-color;
+        font-size: 1.3rem;
+    }
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+@media screen and (max-width: 1024px) {
+    nav {
+        .container {
+            button {
+                display: inline-block;
+                background: transparent;
+                color: $white-color;
+                font-size: 2rem;
+                cursor: pointer;
+
+                &#close_nav-btn {
+                    display: none;
+                }
+            }
+
+            ul {
+                position: fixed;
+                right: 0%;
+                top: 5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                perspective: 300px;
+                display: none;
+
+                li {
+                    width: 100%;
+                    
+
+                    a {
+                        color: $white-color;
+                        height: 100%;
+                        display: block;
+                        padding: 1.5rem 2rem;
+                        border-radius: 0;
+                        background: darken($primary-color-variant, 12%);
+
+                        &.btn {
+                            background: $secondary-color;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

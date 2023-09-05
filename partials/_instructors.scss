@@ -1,0 +1,89 @@
+#instructors {
+    .container {
+        width: 82%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        article {
+            background: $white-color;
+            border-radius: 1rem;
+            box-shadow: 0 1.5rem 1.5rem rgba($black-color, 0.1);
+            position: relative;
+            transition: all 700ms ease;
+
+            &:hover {
+                box-shadow: none;
+
+                .instructors_image::before {
+                    left: 0;
+                    border-radius: 1rem;
+                }
+
+                .instructor_instagram {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .instructors_image {
+                height: 22rem;
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    background: linear-gradient(135deg, rgba($white-color, 0.8), rgba($primary-color-variant, 0.8));
+                    border-radius: 50%;
+                    transition: all 1s ease;
+                }
+            }
+
+            .instructor_details {
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+
+            .instructor_instagram {
+                background: $black-color;
+                color: $white-color;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 50%;
+                padding: 1rem;
+                border-radius: 50%;
+                display: flex;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 1s 300ms ease;
+            }
+        }
+    }
+}
+
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+@media screen and (max-width: 1024px) {
+    #instructors {
+        .container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+    #instructors {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
